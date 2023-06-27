@@ -24,4 +24,4 @@ RUN chown -R www-data:www-data storage bootstrap/cache
 EXPOSE 80
 
 # Start the Apache server
-CMD ["apache2-foreground"]
+CMD ["php", "artisan", "serve"]
