@@ -20,7 +20,7 @@ RUN composer install --no-dev --no-scripts
 # Run additional setup commands if needed
 
 # Start the application
-CMD [ "php", "artisan", "serve" ]
+CMD [ "apache2-foreground"]
 
 # # Set the working directory in the container
 # WORKDIR /var/www/html
