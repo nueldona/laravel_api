@@ -8,11 +8,7 @@ WORKDIR /var/www/html
 COPY composer.json composer.lock ./
 
 # Install PHP dependencies
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends git zip && \
-    docker-php-ext-install pdo_mysql && \
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
-    composer install --no-dev --no-scripts
+RUN composer install
 
 # Copy the remaining Laravel application files to the container
 COPY . .
