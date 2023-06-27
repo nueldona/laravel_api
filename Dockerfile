@@ -1,5 +1,5 @@
 # Use an official PHP runtime as the base image
-FROM php:8.1-apache
+FROM php:8.2-apache
 
 # Install dependencies
 RUN apt-get update && \
